@@ -24,7 +24,7 @@ func main() {
     }
     fmt.Println(balance) // 25893180161173005034
 
-    blockNumber := big.NewInt(0)
+    blockNumber := big.NewInt(37)
     balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
     if err != nil {
         log.Fatal(err)
@@ -36,6 +36,7 @@ func main() {
     ethValue := new(big.Float).Quo(fbalance, big.NewFloat(math.Pow10(18)))
     fmt.Println(ethValue) // 25.729324269165216041
 
+    // PendingBalanceAt 获取的是挂起的余额
     pendingBalance, err := client.PendingBalanceAt(context.Background(), account)
     fmt.Println(pendingBalance) // 25729324269165216042
 }
