@@ -3,5 +3,9 @@
 
 # OpenZeppelin contracts
 /contracts/@openzeppelin
+/contracts/UniswapV2/*.sol
+/contracts/UniswapV2/test
+/contracts/UniswapV2/interfaces
+/contracts/UniswapV2/libraries
 
-/keystore
+/keystore                           
