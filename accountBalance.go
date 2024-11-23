@@ -26,6 +26,15 @@ func main() {
 	}
 	fmt.Println(balance) // 25893180161173005034
 
+	// 获取最新区块上的 nonce 值
+	nonce, err := client.NonceAt(context.Background(), account, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// 打印 nonce 值
+	fmt.Printf("Nonce value: %d\n", nonce)
+
 	blockNumber := big.NewInt(37)
 	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {

@@ -19,7 +19,7 @@ import (
 func main() {
 	// 助记词存在12（128位熵、主流）、15（160）、18（192）、21（224）、24（256位熵、安全性最强）个单词
 	// 生成 BIP-39 助记词
-	entropy, err := bip39.NewEntropy(128) // 128位熵，生成12个单词的助记词
+	entropy, err := bip39.NewEntropy(256) // 128位熵，生成12个单词的助记词
 	if err != nil {
 		log.Fatal(err)
 	}
